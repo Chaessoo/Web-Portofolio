@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyutto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"> -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".fade-in-up");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target); // biar animasinya sekali aja
+              }
+            });
+          },
+          { threshold: 0.2 }
+        ); // muncul 20% udah jalan animasi
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".fade-glow, .img-glow");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+
+  </head>
+  
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>My Portofolio</h1>
+      </div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Language</a></li>
+        <li><a href="#contact">Services</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section fade-in-up" id="home">
+      <div class="container">
+        <div class="text">
+          <h1>
+            Hi,I'm Usamah Hasan Zaid <br />
+            <span class="typing">Backend Developer</span>
+          </h1>
+          <br />
+          <p>
+          "A passionate backend developer specializing in Laravel and PHP,<br/> experienced in designing secure APIs,
+          <br> optimizing databases, and building scalable systems to deliver reliable,<br>
+          efficient, and maintainable web applications for diverse business needs."
+          <br/>
+            
+          </p>
+
+
+      
+
+          <button href="#" class="btn">
+            <a href="https://likeable-polish-c24.notion.site/Usamah-Hasan-Zaid-d6e84cfa2ad74e779db4f242c2fba0c3?source=copy_link" download><h2>See my CV</h2></a>
+          </button>
+        </div>
+        <img class="profil img-glow" src="img/ppig.webp" />
+      </div>
+    </div>
+
+    <div class="garis fade-in-up"></div>
+    <!-- Home End -->
+    <!-- About Start -->
+    <section id="about" class="about-section fade-in-up">
+      <h1>Education & <span>Experience </span></h1>
+    </section>
+
+    <div class="container-row fade-in-up">
+      <img src="img/education.jpg" class="row-img" alt="" />
+      <div class="row">
+        <h3>Ma'had <span>Hijratusunnah</span><br><span class="tahun">2016-2019</span></h3>
+        <p> 
+          Sekolah Menengah Pertama Berbasis Pondok yang mengajarkan agama yang lurus, serta mempelajari bahasa arab dan menghafal
+          Al-Quran 15 juz
+        </p> <br>
+        <h3>SMK <span>Bhinneka karya 5</span><br><span class="tahun">2019-2022</span></h3>
+        <p> 
+          Sekolah Tingkat Menengah Kejuruan Yang Mempelajari Ilmu Jaringan dan Komputer,
+          Serta mempelajari budaya Indonesia dan Agama.
+        </p> <br>
+        <h3>Pondok <span>IT</span><br><span class="tahun">2022-2023</span></h3>
+        <p> 
+          Sebuah Pondok Yang mengajarkan ilmu agama serta IT Developer
+          Diharapkan santrinya siap unutk terjun ke dunia kerja khususnya di bidang IT
+        </p>
+      </div>
+      <!-- <div class="garis-putih"></div> -->
+    </div>
+
+
+    <div class="container-row fade-in-up">
+      <img src="img/code2.jpg" class="row-img" alt="" />
+      <div class="row">
+        <h3>Maken<span>Living</span>  - IT Support Intern<br><span class="tahun">(August-September) 2023</span></h3>
+        <p>
+          
+
+          <p>1. Assisted in database migration from legacy system to a new database platform.</p>
+
+          <p>2. Ensured data accuracy and integrity during migration process.</p>
+
+         <p>3. Provided technical support for internal staff regarding IT-related issues.</p>
+
+         4. Documented migration procedures to support future system maintenance.
+
+        </p>
+      </div>
+      <!-- <div class="garis-putih"></div> -->
+    </div>
+
+    <!-- <div class="container-row fade-in-up">
+      <img src="img/forsaken.jpg" class="row-img" alt="" />
+      <div class="row">
+        <h3>PRX <span>Forsaken</span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          voluptates qui eos voluptate officia.
+          Vel nihil fugiat ullam debitis suscipit atque deleniti quae dolor quia
+          neque, ipsa veniam vitae ducimus!
+        </p>
+      </div>
+      <div class="garis-putih"></div>
+    </div> -->
+
+    <div class="garis fade-in-up"></div>
+    <!-- Hero End -->
+
+    <!-- Skills Start -->
+    <div class="skills" id="skills">
+      <h1 class="fade-in-up">My <span>Skills</span></h1>
+    </div>
+
+    <div class="skill-container-up">
+      <div class="row-skills fade-in-up">
+        <div class="skill-detail">
+          <img class="img-skill" src="img/html.jpg" alt="" />
+          <p>
+             is the backbone of web development, providing the structure and layout for web pages. 
+          </p>
+        </div>
+      </div>
+
+      <div class="row-skills fade-in-up">
+        <div class="skill-detail">
+          <img class="img-skill" src="img/css.jpg" alt="" />
+          <p>
+            refers to writing your own CSS (Cascading Style Sheets) from scratch to style web pages. This approach gives you complete control over the design and layout of your website
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="skill-container">
+      <div class="row-skills fade-in-up">
+        <div class="skill-detail">
+          <img class="img-skill" src="img/php.jpg" alt="" />
+          <p>
+            PHP is an open-source server-side scripting language that many devs use for web development.
+          </p>
+        </div>
+      </div>
+
+      <div class="row-skills fade-in-up">
+        <div class="skill-detail">
+          <img class="img-skill" src="img/laravel.jpg" alt="" />
+          <p>
+            Laravel is PHP web applications framework that uses the Model-View-Controller (MVC) architectural pattern.
+          </p>
+        </div>
+      </div>
+
+      <div class="row-skills fade-in-up">
+        <div class="skill-detail">
+          <img class="img-skill" src="img/mysql.jpg" alt="" />
+          <p>
+           MySQL is an open-source relational database management system (RDBMS) that uses Structured Query Language (SQL) to manage and manipulate data
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="kutipan fade-in-up">
+      <div class="tulisan">
+        <p>
+          "Ecco un altro detto perfetto per l’inizio dell’anno. Per molti di noi nell’emisfero
+           settentrionale, l’inverno, specialmente gennaio, può essere difficile e un po’ deprimente. Il freddo, i giorni grigi e l’inizio di un nuovo anno, quando stai cercando di capire quale
+            sia la strada giusta da percorrere. Anche i più grandi successi iniziano con un sogno."
+        </p>
+      </div>
+    </div>
+
+    <div class="garis fade-in-up"></div>
+
+    <!-- Skills End -->
+
+    <!-- Contact Start -->
+
+    <div id="contact" class="contact">
+      <h1 class="fade-in-up">What I <span>Do</span></h1>
+    </div>
+
+    <!-- <div class="contact-container">
+    <div class="row-sosmed">
+      <a href=""><i data-feather="instagram"></i></a>
+      <a href=""><i data-feather="github"></i></a>
+      <a href=""><i data-feather="facebook"></i></a>
+    </div>
+    </div> -->
+
+    <div class="container-service">
+      <div class="kotak-service fade-in-up">
+        <img
+          class="img-service"
+          src="img/bce024501f1cecbe161853c934d4ea35.jpg"
+          alt=""
+        />
+        <p>
+          API Development & Integration <br>
+          Design and implement RESTful APIs for frontend consumption
+        </p>
+      </div>
+
+      <div class="kotak-service fade-in-up">
+        <img class="img-service" src="img/code1.jpg" alt="" />
+        <p>
+          Database Management <br>
+          Design relational or NoSQL database schemas (e.g., PostgreSQL, MongoDB)
+        </p>
+      </div>
+    </div>
+
+    <div class="kutipan fade-in-up">
+      <div class="tulisan">
+        <p>
+          "Il terzo che voglio condividere con te oggi è un altro grande
+           proverbio da tenere a mente quando hai bisogno di ricordarti che la
+           vita non è fatta solo di routine quotidiane."
+        </p>
+      </div>
+    </div>
+
+    <div class="garis fade-in-up"></div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <h2>UsamahHasanZaid</h2>
+          <p>Backend Web Developer</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-links">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Language</a></li>
+            <li><a href="#contact">Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            Email:
+            <a href="mailto:youremail@gmail.com">hasanzusamah@gmail.com</a>
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/Chaessoo"
+              ><i data-feather="github" class="fab fa-github"></i
+            ></a>
+            <a href="#"
+              ><i data-feather="linkedin" class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://www.instagram.com/usmhhsnz"
+              ><i data-feather="instagram" class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2025 <span>usamahhasanzaid</span>. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
