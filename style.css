@@ -443,6 +443,72 @@ span {
 }
 /* Footer End */
 
+
+/* Media Queury */
+
+@media(max-width : 767px) {
+  nav {
+    text-align: center;
+    font-size: 7px;
+  }
+  .container {
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    font-size: 10px;
+    justify-content: center;
+  }
+
+  .btn{
+    display: block;
+    margin: 20px auto;
+  }
+
+  .profil {
+  display: block;
+  margin: 20px auto; /* juga biar ketengah */
+}
+  
+  /* Removed redundant .container .btn { justify-content: center; } */
+
+  .container .text {
+    font-size: 15px;
+  }
+
+  .profil {
+    height: 250px;
+    width: 250px;
+  }
+
+  .skill-container {
+    flex-direction: column;
+  }
+  .tulisan{
+    text-align: center;
+  }
+  .container-service{
+    flex-direction: column;
+  }
+ 
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .skill-container {
+      flex-direction: column;
+    }
+    .container-service{
+      flex-direction: column;
+    }
+  }
+}
+
+
 /* JavaScript */
 /* Animasi fade + slide */
 .fade-in-up {
